@@ -1,0 +1,40 @@
+* {
+background-color: lightgray;
+text-align: center;
+font-size: 20px;
+}
+
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 35px;
+}
+
+.navi {
+    
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navi a {
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+   
+    color: black;
+}
+
+a:hover {
+    color: blue;
+}
+
+.footer {
+    font-weight: bold;;
+}
+
+h3 {
+    color: royalblue;
+    font-size: 25px;
+}
+
