@@ -1,40 +1,217 @@
 * {
-background-color: lightgray;
-text-align: center;
-font-size: 20px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
-h1 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center;
-    font-size: 35px;
+body{
+    background-color:#0f034f;
+    color: antiquewhite;
 }
 
-.navi {
-    
+
+.header {
+    /* background-color: green; */
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    padding: 20px 3%;
+    padding-right: 10%;
+    align-items: center;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
 }
+
+.name{
+    position: relative;
+    font-size: 25px;
+    font-weight: 600;
+    animation: showRight 1.2s ease forwards;
+    
+
+}
+
 
 .navi a {
     text-decoration: none;
-    font-size: 20px;
-    text-align: center;
+    color: antiquewhite;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .5s;
+}
+
+.navi :hover {
+    color: rgb(10, 145, 229);
+}
+
+.home {
+    position: relative;
+    background: url('brain.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+ 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    
+    align-items: center;
+    padding: 0 3%;
    
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.35);
+}
+.home-content {
+    position: relative;
+    max-width: 600px;
+    
+}
+
+.home-content h3{
+    font-size: 50px;
+    font-weight: 800;
+    padding-bottom: 5px;
+    animation: showRight 2s ease forwards;
+
+
+}
+
+.home-content p {
+    font-size: 20px;
+    padding-bottom: 40px;
+    font-weight: 600;
+    animation: showRight 2.5s ease forwards;
+
+
+
+}
+
+.btn {
+    width: 340px;
+    height: 50px;
+}
+
+.btn a {
+    position: relative;
+    width: 150px;
+    height: 100%;
+    border: 2px solid aqua;
+    border-radius: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 18px;
+    z-index: 1;
+    overflow: hidden;
+    animation: showRight 2.9s ease forwards;
+
+}
+
+.btn a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: aqua;
+    z-index: -1;
+    transition: .5s;
+    
+}
+
+.btn a:hover::before {
+    width: 100%;
+}
+
+.btn a:hover {
     color: black;
 }
 
-a:hover {
-    color: blue;
+
+
+.social {
+     position: absolute;
+     bottom: 40px;
+     width: 170px;
+     display: flex;
+     justify-content: space-between;
 }
 
-.footer {
-    font-weight: bold;;
+.social a{
+    display: inline-flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    border: 2px solid aqua;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    z-index: 1;
+    color: white;
+    overflow: hidden;
+    animation: showRight 3.5s ease forwards;
 }
 
-h3 {
-    color: royalblue;
-    font-size: 25px;
+.social a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: aqua;
+    z-index: -1;
+    transition: .5s;
 }
+
+.social a:hover::before {
+    width: 100%;
+}
+
+.social a:hover {
+    color: black;
+}
+
+
+
+/* keyframes animation */
+@keyframes showRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+
+
+
+
+
+
+
+
 
